@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:;L'Incontro Caffetteria Tabaccheria;;;
+FN:L'Incontro Caffetteria Tabaccheria
+ORG:L'Incontro Caffetteria Tabaccheria
+TEL;TYPE=WORK,VOICE:+390545282579
+EMAIL;TYPE=WORK:lincontro.lugo@outlook.com
+ADR;TYPE=WORK:;;Corso Giuseppe Garibaldi 39/2;Lugo;RA;48022;Italia
+URL:https://lincontrolugo.github.io
+END:VCARD
