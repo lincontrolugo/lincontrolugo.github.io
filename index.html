@@ -83,7 +83,10 @@ section{padding:clamp(56px,9vw,104px) 0}
 .prodotto .immagine.manca::after{content:attr(data-nome);font:400 2.2rem/1.1 var(--script);color:#fff;text-align:center;padding:0 24px}
 .prodotto .quando{display:inline-block;font-size:.85rem;font-weight:500;color:var(--blu);background:#FCEFB8;padding:2px 10px;border-radius:999px;margin-bottom:8px}
 .prodotto p{color:var(--testo-tenue);font-size:1rem;margin:0}
-.lavazza{margin-top:8px;color:var(--testo-tenue)}
+.lavazza{display:flex;align-items:center;gap:24px;margin-top:8px;color:var(--testo-tenue)}
+.lavazza img{width:120px;flex:none}
+.lavazza p{margin:0}
+@media (max-width:480px){.lavazza{flex-direction:column;align-items:flex-start;gap:12px}.lavazza img{width:100px}}
 
 /* giornata */
 .giornata{background:var(--blu);color:#EEF1F8}
@@ -111,6 +114,7 @@ section{padding:clamp(56px,9vw,104px) 0}
 
 /* servizi */
 .servizi .griglia{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:28px}
+.servizi .griglia>.servizio:last-child:nth-child(odd){grid-column:1/-1}
 @media (max-width:720px){.servizi .griglia{grid-template-columns:1fr}}
 .servizio{display:grid;grid-template-columns:128px 1fr;gap:20px;align-items:start;padding:24px;border:1px solid var(--tortora-scuro);border-radius:6px;background:#fff}
 .loghi{display:flex;flex-direction:column;gap:8px}
@@ -205,7 +209,7 @@ footer a{color:#fff}
   <section class="prodotti" id="prodotti">
     <div class="wrap">
       <h2>Quello che ci rende noi</h2>
-      <p class="lavazza">Il cuore del bar è il caffè: serviamo le miscele della linea Lavazza Tales of Italy, ognuna dedicata a un luogo d'Italia.</p>
+      <div class="lavazza"><img src="logo-lavazza.png" alt="Lavazza Tales of Italy"><p>Il cuore del bar è il caffè: serviamo le miscele della linea Lavazza Tales of Italy, ognuna dedicata a un luogo d'Italia.</p></div>
       <div class="griglia">
         <article class="prodotto">
           <div class="immagine" data-nome="Riviera di Chiaia"><img src="caffe-riviera-di-chiaia.jpg" alt="Caffè Lavazza Riviera di Chiaia" onerror="this.parentNode.remove()"></div>
@@ -274,6 +278,10 @@ footer a{color:#fff}
         <div class="servizio">
           <div class="loghi"><div class="logo" data-nome="Tabacchi"><img src="logo-tabacchi.png" alt="Tabacchi" onerror="this.parentNode.classList.add('manca');this.remove()"></div></div>
           <div><h3>Tabaccheria</h3><p>Tabacchi, marche da bollo e valori bollati, pagamento di bollette e multe, ricariche telefoniche e carte regalo digitali (Google Play, PlayStation, Xbox, Nintendo, Netflix e altre).</p></div>
+        </div>
+        <div class="servizio">
+          <div class="loghi"><div class="logo" data-nome="Trenitalia"><img src="logo-trenitalia.png" alt="Trenitalia" onerror="this.parentNode.classList.add('manca');this.remove()"></div></div>
+          <div><h3>Biglietti del treno</h3><p>Biglietti Trenitalia per i treni regionali e nazionali, direttamente al bancone.</p></div>
         </div>
         <div class="servizio">
           <div class="loghi"><div class="logo" data-nome="Punto Poste"><img src="logo-punto-poste.png" alt="Punto Poste" onerror="this.parentNode.classList.add('manca');this.remove()"></div></div>
