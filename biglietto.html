@@ -51,7 +51,7 @@
   }
 
   * { box-sizing: border-box; margin: 0; }
-  html { -webkit-text-size-adjust: 100%; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
   body {
     background: var(--fondo);
     color: var(--testo);
@@ -160,6 +160,28 @@
   }
   .freccia { flex: none; width: 18px; height: 18px; color: var(--tenue); opacity: .6; }
 
+  /* paga e modulo */
+  .paga {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 56px; margin-bottom: 14px;
+    border-radius: 16px;
+    background: var(--azione); color: var(--azione-testo);
+    font-size: 16px; font-weight: 600;
+    box-shadow: var(--ombra);
+    transition: transform .12s ease;
+  }
+  .paga:active { transform: scale(.98); }
+  .paga svg { width: 22px; height: 22px; }
+  .modulo { padding: 18px 16px 12px; scroll-margin-top: 16px; }
+  .modulo p { color: var(--tenue); font-size: 13px; margin: 0 2px 8px; }
+  .modulo .titolo-mod { color: var(--testo); font-weight: 600; font-size: 15px; margin-bottom: 2px; }
+  .modulo iframe {
+    display: block; width: 100%; height: 560px; border: 0;
+    border-radius: 12px; background: #ffffff;
+  }
+  .modulo .nota { font-size: 11.5px; margin-top: 8px; margin-bottom: 0; }
+  .modulo .nota a { text-decoration: underline; }
+
   footer {
     text-align: center;
     color: var(--tenue);
@@ -195,6 +217,9 @@
     <div class="filetto"></div>
     <p class="luogo">Corso Garibaldi 39/2 · Lugo</p>
   </header>
+
+  <a class="paga" href="https://www.satispay.com/download/qrcode/S6Y-SHP--D4FAEAFB-ED27-4A66-BC2E-0621B44BBA40" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>Paga con Satispay</a>
+  <a class="paga" href="#numero" style="margin-bottom: 26px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg>Lasciaci il tuo numero</a>
 
   <nav class="rapide" aria-label="Azioni rapide">
     <a href="tel:+390545282579"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Chiama</a>
@@ -254,6 +279,13 @@
       <span class="testi"><span class="titolo">LinkedIn</span><span class="dettaglio">L'Incontro Lugo</span></span>
       <svg class="freccia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
     </a>
+  </section>
+
+  <h2>Lasciaci il tuo numero</h2>
+  <section class="gruppo modulo" id="numero">
+    <p>Ti richiamiamo noi o ti scriviamo per novità e prenotazioni.</p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScr7RFvzQK7geYM37yMr9r_IO2f-gOR9COZQ6Hesqcz-XjJgQ/viewform?embedded=true" title="Modulo per lasciare il numero di telefono" loading="lazy"></iframe>
+    <p class="nota">Il numero è usato solo da L'Incontro per ricontattarti e non è ceduto a terzi; per cancellarlo scrivi a <a href="mailto:lincontro.lugo@outlook.com">lincontro.lugo@outlook.com</a>. Se il modulo non si vede, <a href="https://forms.gle/cFigoRaE94wzKbqKA" target="_blank" rel="noopener">aprilo qui</a>.</p>
   </section>
 
   <footer>L'Incontro Caffetteria Tabaccheria · Lugo (RA)</footer>
